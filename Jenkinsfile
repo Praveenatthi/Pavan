@@ -1,20 +1,16 @@
 piline{
     agent any
-    environments{
-        TOMCAT_IP = "10.10.10.10"
-        TOMACT_USER = "EC2-USER"
-    }
     stages{
         stage(cloneing stage){
             steps{
-                echo " cloneing sucessfull"
+                echo " git clone "https://github.com/Praveenatthi/Pavan.git"
             }
         }
     }
     stages{
         stage(build stage){
             steps{
-                echo"build is sucessfull"
+                "sh mvn package"
             }
         }
     }
